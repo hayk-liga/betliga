@@ -1,0 +1,56 @@
+import type { Tournament } from "@/types/game"
+
+export const mockTournaments: Tournament[] = [
+  {
+    id: "t1",
+    name: "Daily Race - $1,000",
+    prizePool: 1000,
+    currency: "USD",
+    endsAt: new Date(Date.now() + 8 * 60 * 60 * 1000).toISOString(),
+    leaderboard: [
+      { rank: 1, username: "CryptoKing_99", wagered: 45230, prize: 300 },
+      { rank: 2, username: "LuckyPanda", wagered: 38900, prize: 200 },
+      { rank: 3, username: "BtcWhale", wagered: 32100, prize: 150 },
+      { rank: 4, username: "SpinMaster", wagered: 28700, prize: 100 },
+      { rank: 5, username: "MoonShot42", wagered: 24500, prize: 80 },
+      { rank: 6, username: "DiamondH", wagered: 21300, prize: 60 },
+      { rank: 7, username: "RollerX", wagered: 18900, prize: 40 },
+      { rank: 8, username: "WagerPro", wagered: 15600, prize: 30 },
+      { rank: 9, username: "SlotFrenzy", wagered: 12400, prize: 25 },
+      { rank: 10, username: "GoldRush", wagered: 10200, prize: 15 },
+    ],
+  },
+  {
+    id: "t2",
+    name: "Weekly Showdown - $10,000",
+    prizePool: 10000,
+    currency: "USD",
+    endsAt: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString(),
+    leaderboard: [
+      { rank: 1, username: "HighRoller", wagered: 245000, prize: 3000 },
+      { rank: 2, username: "BetKing", wagered: 198000, prize: 2000 },
+      { rank: 3, username: "CryptoAce", wagered: 156000, prize: 1500 },
+      { rank: 4, username: "LuckyPanda", wagered: 134000, prize: 1000 },
+      { rank: 5, username: "WhaleBet", wagered: 112000, prize: 750 },
+      { rank: 6, username: "SpinWin", wagered: 98000, prize: 500 },
+      { rank: 7, username: "BigStake", wagered: 87000, prize: 400 },
+      { rank: 8, username: "Tornado", wagered: 76000, prize: 350 },
+      { rank: 9, username: "SlotMachine", wagered: 65000, prize: 300 },
+      { rank: 10, username: "RocketBet", wagered: 54000, prize: 200 },
+    ],
+  },
+  {
+    id: "t3",
+    name: "Monthly Championship - $50,000",
+    prizePool: 50000,
+    currency: "USD",
+    endsAt: new Date(Date.now() + 15 * 24 * 60 * 60 * 1000).toISOString(),
+    leaderboard: [
+      { rank: 1, username: "VIPKing", wagered: 1230000, prize: 15000 },
+      { rank: 2, username: "HighRoller", wagered: 980000, prize: 10000 },
+      { rank: 3, username: "BtcLegend", wagered: 870000, prize: 7500 },
+      { rank: 4, username: "CryptoKing_99", wagered: 756000, prize: 5000 },
+      { rank: 5, username: "MegaBet", wagered: 645000, prize: 3500 },
+    ],
+  },
+]

@@ -1,0 +1,17 @@
+export const CRYPTO_CURRENCIES = [
+  { symbol: "BTC", name: "Bitcoin", icon: "bitcoin" },
+  { symbol: "ETH", name: "Ethereum", icon: "ethereum" },
+  { symbol: "USDT", name: "Tether", icon: "usdt" },
+  { symbol: "BNB", name: "BNB", icon: "bnb" },
+  { symbol: "SOL", name: "Solana", icon: "solana" },
+  { symbol: "XRP", name: "XRP", icon: "xrp" },
+  { symbol: "DOGE", name: "Dogecoin", icon: "doge" },
+  { symbol: "ADA", name: "Cardano", icon: "ada" },
+  { symbol: "TRX", name: "TRON", icon: "trx" },
+  { symbol: "LTC", name: "Litecoin", icon: "ltc" },
+  { symbol: "DOT", name: "Polkadot", icon: "dot" },
+  { symbol: "MATIC", name: "Polygon", icon: "matic" },
+  { symbol: "SHIB", name: "Shiba Inu", icon: "shib" },
+  { symbol: "AVAX", name: "Avalanche", icon: "avax" },
+  { symbol: "LINK", name: "Chainlink", icon: "link" },
+] as const
