@@ -2,17 +2,17 @@
 
 @theme inline {
   --spacing: 0.25rem;
-  --color-bg-main: #081929;
-  --color-bg-card: #0D2137;
-  --color-bg-sidebar: #0A1628;
-  --color-bg-elevated: #111D2E;
-  --color-accent: #00D553;
-  --color-accent-hover: #00B847;
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: #8899AA;
-  --color-border: #1A2C3F;
+  --color-bg-main: #F5F5F5;
+  --color-bg-card: #FFFFFF;
+  --color-bg-sidebar: #FFFFFF;
+  --color-bg-elevated: #FFFFFF;
+  --color-accent: #7C3AED;
+  --color-accent-hover: #6D28D9;
+  --color-text-primary: #1A1A2E;
+  --color-text-secondary: #6B7280;
+  --color-border: #E5E7EB;
   --color-danger: #FF4757;
-  --color-bg-input: #0A1929;
+  --color-bg-input: #F9FAFB;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 

@@ -1,74 +1,33 @@
 import type { NavItem } from "@/types/common"
 
 export const sidebarNavItems: NavItem[] = [
-  {
-    label: "Casino",
-    href: "/casino",
-    icon: "dice",
-    children: [
-      { label: "Lobby", href: "/casino" },
-      { label: "Originals", href: "/casino?category=originals" },
-      { label: "Slots", href: "/casino?category=slots" },
-      { label: "Table Games", href: "/casino?category=table-games" },
-      { label: "Jackpot", href: "/casino?category=jackpot" },
-    ],
-  },
-  {
-    label: "Live Casino",
-    href: "/live-casino",
-    icon: "tv",
-    children: [
-      { label: "Lobby", href: "/live-casino" },
-      { label: "Game Shows", href: "/live-casino?category=game-shows" },
-      { label: "Blackjack", href: "/live-casino?category=blackjack" },
-      { label: "Roulette", href: "/live-casino?category=roulette" },
-    ],
-  },
-  {
-    label: "Sports",
-    href: "/sports",
-    icon: "trophy",
-    children: [
-      { label: "Highlights", href: "/sports" },
-      { label: "Live", href: "/sports?tab=live" },
-      { label: "Soccer", href: "/sports?sport=soccer" },
-      { label: "Basketball", href: "/sports?sport=basketball" },
-    ],
-  },
-  {
-    label: "Esports",
-    href: "/esports",
-    icon: "gamepad-2",
-    children: [
-      { label: "CS2", href: "/esports?sport=cs2" },
-      { label: "League of Legends", href: "/esports?sport=lol" },
-      { label: "Dota 2", href: "/esports?sport=dota2" },
-    ],
-  },
-  {
-    label: "Promotions",
-    href: "/promotions",
-    icon: "gift",
-  },
+  { label: "Activity Center", href: "/activity-center", icon: "activity" },
+  { label: "Missions", href: "/missions", icon: "target", badgeDot: true },
+  { label: "Recent Games", href: "/recent-games", icon: "clock" },
+  { label: "HOT", href: "/hot", icon: "flame" },
+  { label: "New Games", href: "/new-games", icon: "sparkles" },
+  { label: "Live Entertainment", href: "/live-entertainment", icon: "radio" },
+  { label: "Sportsbook", href: "/sportsbook", icon: "trophy" },
+  { label: "Slots", href: "/slots", icon: "dice" },
+  { label: "Electronic Games", href: "/electronic-games", icon: "gamepad" },
+  { label: "Poker", href: "/poker", icon: "spade" },
+  { label: "Table Games", href: "/table-games", icon: "layout-grid" },
+  { label: "Fishing", href: "/fishing", icon: "fish" },
+  { label: "Futures Trading", href: "/futures-trading", icon: "trending-up" },
+  { label: "VIP Club", href: "/vip-club", icon: "crown" },
 ]
 
 export const footerLinks = {
-  games: [
-    { label: "Casino", href: "/casino" },
-    { label: "Live Casino", href: "/live-casino" },
-    { label: "Originals", href: "/casino?category=originals" },
-    { label: "Table Games", href: "/casino?category=table-games" },
-  ],
   platform: [
-    { label: "Sports", href: "/sports" },
-    { label: "Esports", href: "/esports" },
     { label: "Promotions", href: "/promotions" },
-    { label: "VIP Program", href: "/promotions" },
-  ],
-  community: [
-    { label: "Blog", href: "#" },
-    { label: "Forum", href: "#" },
+    { label: "VIP Club", href: "/vip-club" },
     { label: "Affiliates", href: "#" },
     { label: "Help Center", href: "#" },
+  ],
+  about: [
+    { label: "About Us", href: "#" },
+    { label: "Terms of Service", href: "#" },
+    { label: "Privacy Policy", href: "#" },
+    { label: "Responsible Gaming", href: "#" },
   ],
 }

@@ -1,0 +1,28 @@
+"use client"
+
+import React from "react"
+import Link from "next/link"
+import { ArrowLeft, ArrowLeftRight } from "lucide-react"
+
+const TransactionsPage = () => {
+  return (
+    <div className="px-4 sm:px-5 py-4">
+      <div className="flex items-center gap-3 mb-5">
+        <Link
+          href="/"
+          className="w-8 h-8 rounded-lg border border-border flex items-center justify-center text-text-secondary hover:text-text-primary hover:border-accent/30 transition-colors"
+        >
+          <ArrowLeft size={16} />
+        </Link>
+        <h1 className="text-lg font-bold text-text-primary">Transactions</h1>
+      </div>
+      <div className="bg-bg-card border border-border rounded-xl p-8 text-center">
+        <ArrowLeftRight size={48} className="text-accent mx-auto mb-4" />
+        <h2 className="text-xl font-bold text-text-primary mb-2">Transaction History</h2>
+        <p className="text-text-secondary">View all your deposits, withdrawals, and transfers.</p>
+      </div>
+    </div>
+  )
+}
+
+export default TransactionsPage

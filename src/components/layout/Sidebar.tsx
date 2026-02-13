@@ -1,117 +1,52 @@
 "use client"
 
-import React, { useState } from "react"
+import React from "react"
 import Link from "next/link"
-import { usePathname, useSearchParams } from "next/navigation"
+import { usePathname } from "next/navigation"
 import {
-  Dice1 as DiceIcon,
-  Tv,
+  Activity,
+  Target,
+  Clock,
+  Flame,
+  Sparkles,
+  Radio,
   Trophy,
+  Dice1,
   Gamepad2,
-  Gift,
-  ChevronDown,
-  ChevronRight,
+  Spade,
+  LayoutGrid,
+  Fish,
+  TrendingUp,
+  Crown,
   Globe,
+  MessageCircle,
+  Download,
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { useSidebar } from "@/hooks/useSidebar"
 import { sidebarNavItems } from "@/data/mock-nav-items"
-import { CountdownTimer } from "@/components/ui/CountdownTimer"
-import type { NavItem } from "@/types/common"
 
 const iconMap: Record<string, React.ReactNode> = {
-  dice: <DiceIcon size={18} />,
-  tv: <Tv size={18} />,
+  activity: <Activity size={18} />,
+  target: <Target size={18} />,
+  clock: <Clock size={18} />,
+  flame: <Flame size={18} />,
+  sparkles: <Sparkles size={18} />,
+  radio: <Radio size={18} />,
   trophy: <Trophy size={18} />,
-  "gamepad-2": <Gamepad2 size={18} />,
-  gift: <Gift size={18} />,
-}
-
-const cashbackEndDate = new Date(Date.now() + 6 * 24 * 60 * 60 * 1000).toISOString()
-
-const NavItemComponent = ({
-  item,
-  isCollapsed,
-  pathname,
-  currentUrl,
-}: {
-  item: NavItem
-  isCollapsed: boolean
-  pathname: string
-  currentUrl: string
-}) => {
-  const [isExpanded, setIsExpanded] = useState(false)
-  const isActive = pathname === item.href || pathname.startsWith(item.href + "/")
-  const hasChildren = item.children && item.children.length > 0
-
-  return (
-    <div>
-      <Link
-        href={item.href}
-        onClick={(e) => {
-          if (hasChildren && !isCollapsed) {
-            e.preventDefault()
-            setIsExpanded(!isExpanded)
-          }
-        }}
-        className={cn(
-          "flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200",
-          isActive
-            ? "text-accent"
-            : "text-text-secondary hover:text-text-primary",
-          isCollapsed && "justify-center px-2",
-        )}
-      >
-        {item.icon && (
-          <span className="flex-shrink-0">{iconMap[item.icon]}</span>
-        )}
-        {!isCollapsed && (
-          <>
-            <span className="text-[13px] font-medium flex-1">{item.label}</span>
-            {hasChildren && (
-              <span className="text-text-secondary/50">
-                {isExpanded ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
-              </span>
-            )}
-          </>
-        )}
-      </Link>
-      {hasChildren && isExpanded && !isCollapsed && (
-        <div className="ml-9 mt-0.5 flex flex-col gap-0.5 border-l border-border/50 pl-3">
-          {item.children?.map((child) => {
-            const isChildActive = child.href.includes("?")
-              ? currentUrl === child.href
-              : pathname === child.href && !currentUrl.includes("?")
-
-            return (
-              <Link
-                key={child.href}
-                href={child.href}
-                className={cn(
-                  "text-[13px] py-1.5 rounded transition-colors",
-                  isChildActive
-                    ? "text-accent font-medium"
-                    : "text-text-secondary hover:text-text-primary",
-                )}
-              >
-                {child.label}
-              </Link>
-            )
-          })}
-        </div>
-      )}
-    </div>
-  )
+  dice: <Dice1 size={18} />,
+  gamepad: <Gamepad2 size={18} />,
+  spade: <Spade size={18} />,
+  "layout-grid": <LayoutGrid size={18} />,
+  fish: <Fish size={18} />,
+  "trending-up": <TrendingUp size={18} />,
+  crown: <Crown size={18} />,
 }
 
 export const Sidebar = () => {
   const { isOpen, isCollapsed, close } = useSidebar()
   const pathname = usePathname()
-  const searchParams = useSearchParams()
-  const currentUrl = searchParams.toString()
-    ? `${pathname}?${searchParams.toString()}`
-    : pathname
 
   return (
     <>
@@ -128,30 +63,55 @@ export const Sidebar = () => {
           isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0",
         )}
       >
-        {!isCollapsed && (
-          <div className="px-4 pt-4 pb-3">
-            <p className="text-[11px] text-text-secondary font-medium mb-2">Weekly Cashback in</p>
-            <CountdownTimer targetDate={cashbackEndDate} compact />
-          </div>
-        )}
-
-        <nav className="flex-1 px-2 py-1 flex flex-col gap-0.5">
-          {sidebarNavItems.map((item) => (
-            <NavItemComponent
-              key={item.href}
-              item={item}
-              isCollapsed={isCollapsed}
-              pathname={pathname}
-              currentUrl={currentUrl}
-            />
-          ))}
+        <nav className="flex-1 px-2 py-3 flex flex-col gap-0.5">
+          {sidebarNavItems.map((item) => {
+            const isActive = pathname === item.href
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  "flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 relative",
+                  isActive
+                    ? "text-accent bg-accent/5"
+                    : "text-text-secondary hover:text-text-primary hover:bg-bg-main",
+                  isCollapsed && "justify-center px-2",
+                )}
+              >
+                {item.icon && (
+                  <span className="flex-shrink-0 relative">
+                    {iconMap[item.icon]}
+                    {item.badgeDot && (
+                      <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-red-500 rounded-full" />
+                    )}
+                  </span>
+                )}
+                {!isCollapsed && (
+                  <span className="text-[13px] font-medium">{item.label}</span>
+                )}
+              </Link>
+            )
+          })}
         </nav>
 
         {!isCollapsed && (
-          <div className="px-3 py-3">
+          <div className="px-3 py-3 border-t border-border flex flex-col gap-2">
+            <div className="bg-accent/10 rounded-lg p-3">
+              <div className="flex items-center gap-2 mb-1">
+                <Download size={14} className="text-accent" />
+                <span className="text-xs font-semibold text-accent">Download APP</span>
+              </div>
+              <p className="text-[10px] text-text-secondary">Get the best experience on mobile</p>
+            </div>
+
+            <button className="flex items-center gap-2 text-[13px] text-text-secondary px-3 py-2 hover:text-text-primary transition-colors">
+              <MessageCircle size={14} />
+              Live Support
+            </button>
+
             <button className="flex items-center gap-2 text-[13px] text-text-secondary border border-border rounded-lg px-3 py-2 w-full hover:border-accent/30 transition-colors">
               <Globe size={14} />
-              English (en)
+              English
             </button>
           </div>
         )}

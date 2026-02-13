@@ -29,6 +29,10 @@ export type GameCategory =
   | "baccarat"
   | "dice"
   | "slots"
+  | "poker"
+  | "fishing"
+  | "electronic"
+  | "futures"
 
 export interface GameProvider {
   id: string

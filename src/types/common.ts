@@ -7,6 +7,7 @@ export interface NavItem {
   href: string
   icon?: string
   badge?: string
+  badgeDot?: boolean
   children?: NavItem[]
 }
 

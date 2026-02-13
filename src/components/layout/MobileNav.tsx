@@ -3,16 +3,16 @@
 import React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Home, Dice1, Tv, Trophy, Gift } from "lucide-react"
+import { Home, Flame, Dice1, Trophy, Crown } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
 const navItems = [
   { label: "Home", href: "/", icon: Home },
-  { label: "Casino", href: "/casino", icon: Dice1 },
-  { label: "Live", href: "/live-casino", icon: Tv },
-  { label: "Sports", href: "/sports", icon: Trophy },
-  { label: "Promos", href: "/promotions", icon: Gift },
+  { label: "HOT", href: "/hot", icon: Flame },
+  { label: "Slots", href: "/slots", icon: Dice1 },
+  { label: "Sports", href: "/sportsbook", icon: Trophy },
+  { label: "VIP", href: "/vip-club", icon: Crown },
 ]
 
 export const MobileNav = () => {

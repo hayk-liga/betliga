@@ -1,0 +1,98 @@
+import type { Mission } from "@/types/mission"
+
+export const mockMissions: Mission[] = [
+  {
+    id: "d1",
+    title: "Place 5 Bets",
+    description: "Place at least 5 bets on any game",
+    reward: 5,
+    rewardCurrency: "USDT",
+    type: "daily",
+    status: "available",
+    progress: 2,
+    target: 5,
+  },
+  {
+    id: "d2",
+    title: "Win 3 Games",
+    description: "Win at least 3 games in any category",
+    reward: 10,
+    rewardCurrency: "USDT",
+    type: "daily",
+    status: "in_progress",
+    progress: 1,
+    target: 3,
+  },
+  {
+    id: "d3",
+    title: "Play a Live Game",
+    description: "Play any live casino game for at least 5 minutes",
+    reward: 3,
+    rewardCurrency: "USDT",
+    type: "daily",
+    status: "completed",
+    progress: 1,
+    target: 1,
+  },
+  {
+    id: "d4",
+    title: "Deposit Funds",
+    description: "Make a deposit of at least $10",
+    reward: 8,
+    rewardCurrency: "USDT",
+    type: "daily",
+    status: "available",
+    progress: 0,
+    target: 1,
+  },
+  {
+    id: "w1",
+    title: "Wager $500",
+    description: "Wager a total of $500 across all games",
+    reward: 50,
+    rewardCurrency: "USDT",
+    type: "weekly",
+    status: "in_progress",
+    progress: 230,
+    target: 500,
+  },
+  {
+    id: "w2",
+    title: "Play 10 Different Games",
+    description: "Try at least 10 different games this week",
+    reward: 25,
+    rewardCurrency: "USDT",
+    type: "weekly",
+    status: "available",
+    progress: 4,
+    target: 10,
+  },
+  {
+    id: "w3",
+    title: "Win 20 Games",
+    description: "Win at least 20 games in any category",
+    reward: 30,
+    rewardCurrency: "USDT",
+    type: "weekly",
+    status: "available",
+    progress: 8,
+    target: 20,
+  },
+  {
+    id: "w4",
+    title: "Invite a Friend",
+    description: "Invite a friend who makes their first deposit",
+    reward: 100,
+    rewardCurrency: "USDT",
+    type: "weekly",
+    status: "available",
+    progress: 0,
+    target: 1,
+  },
+]
+
+export const getDailyMissions = (): Mission[] =>
+  mockMissions.filter((m) => m.type === "daily")
+
+export const getWeeklyMissions = (): Mission[] =>
+  mockMissions.filter((m) => m.type === "weekly")

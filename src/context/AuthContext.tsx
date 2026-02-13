@@ -20,6 +20,12 @@ interface AuthContextValue {
 
 export const AuthContext = createContext<AuthContextValue | null>(null)
 
+const defaultBalances = [
+  { currency: "USDT", symbol: "₮", balance: 1250.0, color: "#26A17B" },
+  { currency: "BTC", symbol: "₿", balance: 0.05432, color: "#F7931A" },
+  { currency: "ETH", symbol: "◆", balance: 1.2345, color: "#627EEA" },
+]
+
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null)
   const [isLoginOpen, setIsLoginOpen] = useState(false)
@@ -30,8 +36,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       id: "1",
       username: "CryptoPlayer",
       email: _email,
-      balance: 0.05432,
-      currency: "BTC",
+      balance: 1250.0,
+      currency: "USDT",
+      balances: defaultBalances,
     })
     setIsLoginOpen(false)
   }, [])
@@ -42,7 +49,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       username,
       email,
       balance: 0,
-      currency: "BTC",
+      currency: "USDT",
+      balances: [
+        { currency: "USDT", symbol: "₮", balance: 0, color: "#26A17B" },
+        { currency: "BTC", symbol: "₿", balance: 0, color: "#F7931A" },
+        { currency: "ETH", symbol: "◆", balance: 0, color: "#627EEA" },
+      ],
     })
     setIsSignUpOpen(false)
   }, [])

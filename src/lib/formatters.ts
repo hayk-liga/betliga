@@ -41,5 +41,5 @@ export const generatePlaceholderGradient = (name: string): string => {
   }
   const hue1 = Math.abs(hash % 360)
   const hue2 = (hue1 + 40) % 360
-  return `linear-gradient(135deg, hsl(${hue1}, 70%, 30%), hsl(${hue2}, 70%, 20%))`
+  return `linear-gradient(135deg, hsl(${hue1}, 60%, 65%), hsl(${hue2}, 60%, 55%))`
 }

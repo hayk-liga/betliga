@@ -10,7 +10,7 @@ export const mockPromotions: Promotion[] = [
     ctaText: "Claim Now",
     ctaHref: "/promotions",
     badge: "NEW",
-    gradient: "linear-gradient(135deg, #1a472a, #0d2137)",
+    gradient: "linear-gradient(135deg, #7C3AED, #5B21B6)",
   },
   {
     id: "p2",
@@ -20,7 +20,7 @@ export const mockPromotions: Promotion[] = [
     category: "casino",
     ctaText: "Learn More",
     ctaHref: "/promotions",
-    gradient: "linear-gradient(135deg, #1a2a47, #0d2137)",
+    gradient: "linear-gradient(135deg, #6D28D9, #4C1D95)",
   },
   {
     id: "p3",
@@ -30,7 +30,7 @@ export const mockPromotions: Promotion[] = [
     category: "sports",
     ctaText: "Get Free Bet",
     ctaHref: "/promotions",
-    gradient: "linear-gradient(135deg, #472a1a, #37210d)",
+    gradient: "linear-gradient(135deg, #8B5CF6, #6D28D9)",
   },
   {
     id: "p4",
@@ -41,7 +41,7 @@ export const mockPromotions: Promotion[] = [
     ctaText: "Join Tournament",
     ctaHref: "/promotions",
     badge: "HOT",
-    gradient: "linear-gradient(135deg, #471a2a, #37210d)",
+    gradient: "linear-gradient(135deg, #A78BFA, #7C3AED)",
   },
   {
     id: "p5",
@@ -51,7 +51,7 @@ export const mockPromotions: Promotion[] = [
     category: "casino",
     ctaText: "Deposit Now",
     ctaHref: "/promotions",
-    gradient: "linear-gradient(135deg, #2a1a47, #210d37)",
+    gradient: "linear-gradient(135deg, #5B21B6, #3B0764)",
   },
   {
     id: "p6",
@@ -61,7 +61,7 @@ export const mockPromotions: Promotion[] = [
     category: "sports",
     ctaText: "Bet Now",
     ctaHref: "/sports",
-    gradient: "linear-gradient(135deg, #1a4747, #0d3737)",
+    gradient: "linear-gradient(135deg, #7C3AED, #4338CA)",
   },
   {
     id: "p7",
@@ -71,7 +71,7 @@ export const mockPromotions: Promotion[] = [
     category: "casino",
     ctaText: "Play Live",
     ctaHref: "/live-casino",
-    gradient: "linear-gradient(135deg, #47471a, #37370d)",
+    gradient: "linear-gradient(135deg, #6D28D9, #4F46E5)",
   },
   {
     id: "p8",
@@ -81,7 +81,7 @@ export const mockPromotions: Promotion[] = [
     category: "general",
     ctaText: "Invite Friends",
     ctaHref: "/promotions",
-    gradient: "linear-gradient(135deg, #1a4727, #0d3721)",
+    gradient: "linear-gradient(135deg, #8B5CF6, #5B21B6)",
   },
   {
     id: "p9",
@@ -91,7 +91,7 @@ export const mockPromotions: Promotion[] = [
     category: "general",
     ctaText: "Learn More",
     ctaHref: "/promotions",
-    gradient: "linear-gradient(135deg, #3a1a47, #2d0d37)",
+    gradient: "linear-gradient(135deg, #A78BFA, #6D28D9)",
   },
   {
     id: "p10",
@@ -101,7 +101,7 @@ export const mockPromotions: Promotion[] = [
     category: "sports",
     ctaText: "Bet Esports",
     ctaHref: "/esports",
-    gradient: "linear-gradient(135deg, #1a2747, #0d1a37)",
+    gradient: "linear-gradient(135deg, #7C3AED, #3B0764)",
   },
 ]
 
